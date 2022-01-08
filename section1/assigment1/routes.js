@@ -44,6 +44,22 @@ const requestHandler = (req, res) => {
         </html>`);
         return res.end();
     }
+    if (url === '/users-2'){
+        res.setHeader('Content-Type', 'text/html');
+        res.write(`<html>
+            <head>
+                <title>My Page</title>
+            </head>
+                <body>
+                    <ul>
+                    <li>New User 1</li>
+                    <li>New User 2</li>
+                    <li>New User 3</li>
+                    </ul>
+                </body>
+        </html>`);
+        return res.end();
+    }
 }
 
 module.exports = requestHandler;
